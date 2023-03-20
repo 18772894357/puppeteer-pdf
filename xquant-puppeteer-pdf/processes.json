@@ -1,0 +1,22 @@
+{
+  "apps": [
+    {
+      "name": "app-puppeteer",
+      "cwd": "./",
+      "script":"./server.js",
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "error_file": "./logs/app-err.log",
+      "out_file": "./logs/app-out.log",
+      "exec_mode": "fork",
+      "watch": false,
+      "ignore_watch": "./logs",
+      "env": {
+        "COMMON_VARIABLE": "true",
+        "NODE_ENV": "production"
+      },
+      "env_production" : {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

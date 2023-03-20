@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button id="button">文件下载</button>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript" src="./js-file-download.js"></script>
+<script type="text/javascript">
+	$('#button').click(() => {
+    $.ajax({
+      url: '/download/pdf',
+      type: 'POST',
+      xhrFields: { responseType: "blob" },
+      contentType: 'application/json',
+      data: JSON.stringify({
+        url: 'http:www.baidu.com',
+        viewport: {
+          width: 1366,
+          height: 768,
+          scale: 794 / 1366,
+          displayHeaderFooter: true,
+          footerTemplate: `<div style='color: red; font-size: 12px; width: 100%; text-align: center;'>Repeating footer on page <span class="pageNumber"></span> of <span class="totalPages"></span></div>`,
+          margin: {
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 20
+          },
+          format: 'A4',
+          printBackground: true
+        },
+        headers: {
+          token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsInRzIjoxNjY2ODUwNjg3NjIxfQ.7tOURBxQ7FnnTvFDK_eaztWMWfL7Ve8llzVZJSOU_Gw'
+        },
+        cookie: {}
+      }),
+      success: (data) => {
+        jsFileDonwload(data, `test_${new Date().getTime()}.pdf`)
+      }
+    })
+  })
+</script>
+</body>
+</html>

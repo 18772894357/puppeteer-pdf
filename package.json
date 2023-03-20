@@ -1,0 +1,14 @@
+{
+  "name": "20230320",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xquant-puppeteer-pdf": "^1.0.1"
+  }
+}

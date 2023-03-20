@@ -1,8 +1,8 @@
 ## DEMO运行
 
-npm i xquant-puppeteer-pdf
-cd node_modules/xquant-puppeteer-pdf && npm run start
-运行 http://localhost:6001/demo.html
+npm i xquant-puppeteer-pdf  
+cd node_modules/xquant-puppeteer-pdf && npm run start  
+运行 http://localhost:6001/demo.html  
 
 ---
 
